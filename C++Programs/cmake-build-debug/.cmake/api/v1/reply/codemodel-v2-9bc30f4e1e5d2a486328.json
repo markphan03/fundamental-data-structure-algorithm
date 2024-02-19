@@ -1,0 +1,159 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "gcd",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "arrangement_size_k::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-arrangement_size_k-Debug-4b9dcab1daeb90443ffb.json",
+					"name" : "arrangement_size_k",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "closest_pair::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-closest_pair-Debug-078b7162de7f8ecb2070.json",
+					"name" : "closest_pair",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "combination::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-combination-Debug-78abc726a95923f9c90b.json",
+					"name" : "combination",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gcd::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gcd-Debug-ba0b1a1317a924e63c3f.json",
+					"name" : "gcd",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "generate_combination::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-generate_combination-Debug-ed695f008550ab7be915.json",
+					"name" : "generate_combination",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "generate_permutation::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-generate_permutation-Debug-d5a83903334dd74bd919.json",
+					"name" : "generate_permutation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "knapsack1-0::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-knapsack1-0-Debug-257c9752797ed9883f5d.json",
+					"name" : "knapsack1-0",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lis::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lis-Debug-c4e495e206b242ea86b1.json",
+					"name" : "lis",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "nqueens::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-nqueens-Debug-09e4ca3d38ebe869fc8a.json",
+					"name" : "nqueens",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "permutation::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-permutation-Debug-fececb2d17198fa1bba4.json",
+					"name" : "permutation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tsp_bnb::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tsp_bnb-Debug-0aefa946c9f6163d0bc5.json",
+					"name" : "tsp_bnb",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tsp_naive::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tsp_naive-Debug-b91f7c0021d5d1734463.json",
+					"name" : "tsp_naive",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/tuemi/csce310-spring2024/C++Programs/cmake-build-debug",
+		"source" : "C:/Users/tuemi/csce310-spring2024/C++Programs"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

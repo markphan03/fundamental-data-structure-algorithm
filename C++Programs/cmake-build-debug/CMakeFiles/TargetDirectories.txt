@@ -1,0 +1,14 @@
+C:/Users/tuemi/csce310-spring2024/C++Programs/cmake-build-debug/CMakeFiles/arrangement_size_k.dir
+C:/Users/tuemi/csce310-spring2024/C++Programs/cmake-build-debug/CMakeFiles/combination.dir
+C:/Users/tuemi/csce310-spring2024/C++Programs/cmake-build-debug/CMakeFiles/permutation.dir
+C:/Users/tuemi/csce310-spring2024/C++Programs/cmake-build-debug/CMakeFiles/nqueens.dir
+C:/Users/tuemi/csce310-spring2024/C++Programs/cmake-build-debug/CMakeFiles/tsp_naive.dir
+C:/Users/tuemi/csce310-spring2024/C++Programs/cmake-build-debug/CMakeFiles/tsp_bnb.dir
+C:/Users/tuemi/csce310-spring2024/C++Programs/cmake-build-debug/CMakeFiles/generate_permutation.dir
+C:/Users/tuemi/csce310-spring2024/C++Programs/cmake-build-debug/CMakeFiles/generate_combination.dir
+C:/Users/tuemi/csce310-spring2024/C++Programs/cmake-build-debug/CMakeFiles/closest_pair.dir
+C:/Users/tuemi/csce310-spring2024/C++Programs/cmake-build-debug/CMakeFiles/knapsack1-0.dir
+C:/Users/tuemi/csce310-spring2024/C++Programs/cmake-build-debug/CMakeFiles/lis.dir
+C:/Users/tuemi/csce310-spring2024/C++Programs/cmake-build-debug/CMakeFiles/gcd.dir
+C:/Users/tuemi/csce310-spring2024/C++Programs/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/tuemi/csce310-spring2024/C++Programs/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,43 @@
+
+# Các cách duyệt graph
+def DFS(s):
+    if not mark[s]:
+        mark[s] = true # duyet node
+        for v in Adj[s]:
+            DFS(v)
+
+def DFS(s):
+    if not mark[s]:
+        mark[s]
+        for v in range(n):
+            if A[s][v] != 0:
+                DFS(v)
+
+def DFS_Stack(s):
+    S = Stack()
+    Push(S, s)
+    while not isEmpty(S):
+        u = pop(S)
+        if not mark[u]:
+            mark[u] = True
+            for v in Adj[u]:
+                Push(S, v)
+
+
+# Duyệt theo chiều rộng
+def BFS(s)
+    Q = Queue()
+    enqueue(Q, s)
+    while not isEmpty(Q):
+        v = dequeue(Q)
+        if not mark[v]:
+            mark[v] = True
+            for u in Adj[v]:
+                enqueue(Q, u)
+
+
+# Duyệt xong thì phải làm sao để tìm cách in ra:
+
+
+
+

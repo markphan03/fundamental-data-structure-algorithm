@@ -1,0 +1,21 @@
+This is another simple way of establish a custom Stack using array in py
+
+class Stack:
+     def __init__(self):
+        self.items = []
+
+def push(S, x):
+    S.items.append(x)
+
+def pop(S)
+    if isEmpty(S):
+        raise RuntimeError("Stack is empty")
+    return S.items.pop()
+
+def top(S)
+    if isEmpty(S):
+        raise RuntimeError("Stack is empty")
+    return S.items[len(S.items)]
+
+def isEmpty(S):
+    return len(S.items) == 0

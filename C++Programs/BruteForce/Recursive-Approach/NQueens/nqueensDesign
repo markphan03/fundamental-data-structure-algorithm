@@ -1,0 +1,23 @@
+Find all arrangements to place n queens on the board, such they would not "eat" each other.
+
+Idea:
+    + We will recursively find how to place ith queen on ith row.
+        - In order to do that, we must have these checks:
+            Let c[0..n-1] be check available collum array
+                d1 map<int, bool>: a Northeast-Southwest diagonal maps keys (diagonals) in range [0..2n-2] to True/False.
+                    Why [0..2n-2]?
+                    Because every grid in theirs diagonal := its row + its collum (0<=row,collum<=n-1), the diagonal is
+                    in range [0..2n-2].
+                d2 map<int, bool>: a Northwest-Southeast diagonal maps keys (diagonals) in range [1-n...n-1] to
+                True/False.
+                    Why [1-n...n-1]?
+                    Because every grid in theirs diagonal := its row - its collum (0 <= row, collum <= n-1), the diagonal
+                    is in range [1-n ... n-1]
+
+
+            + if collum j not taken (c[j] = True) and NE-SW diagonal is not taken (d1.at(i+j) = True) and NW - SE
+            diagonal is not taken (d2.at(i-j) = True).
+                We will mark those checks as False to prevent placement of ith+1 in the eatable collum and 2 diagonals
+                Then, we will do the next recursive call for ith + 1.
+                After we have found a nqueens arrangement, there will be recursive call return at the latest call, then
+                we will mark those checks at that position as True to make it available for next selection.

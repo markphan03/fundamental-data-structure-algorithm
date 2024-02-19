@@ -1,0 +1,119 @@
+Vertex traversal is an extremely important element in graph algorithms. According to the rule, each vertex can only be traversed once
+
+BFS(s)
+     v = dequeue()
+     if not mark[v]:
+         mark[v]
+     ....
+         for u in Adj[v]:
+             enqueue(Q, u)
+
+Dijkstra(s)
+     v = extract_min()
+     mark[v] = True
+     for u in Adj[v]
+         if not mark[v]:
+             if ..
+                 Insert(Q, v)
+
+
+BFS:
+     There is a conditional line "if not mark[v]" after dequeue because when the algorithm enqueue() a certain vertex, it may
+that has been approved or not approved. Therefore, after dequeue, we must check to see if that vertex has been approved or not.
+     After browsing, dequeue() another vertex. If not, browse and find and enqueue() the vertices next to the newly browsed vertex.
+
+Dijsktra:
+     There is no "if not mark[v]" conditional line because after extract_min(), we know exactly which vertex v has not been approved.
+     The reason is that before we add that vertex to Q, t has the line "if not mark[v]", and only vertices that have not been visited before will be
+is put into Queue.
+
+-------------------------------------------------- -------------------------------------------------- ----------------
+
+Compare two types of Dijsktra algorithm using Min Priority Queue:
+
+Dijsktra_1 - Build complete heap, no insertion of new vertex to heap.
+
+Algorithm description:
+
+Need to use array:
+     - d[]: to store the distance of a starting vertex (source) to the remaining vertices in V.
+     - Q: min priority queue to ExtractMin and DecreaseKey when finding a shorter distance (shorter way) to traverse that vertex
+     - W[][]: weight matrix.
+     - Adj[][]: Adj is a matrix, when operating Adj[u] will return a list of vertices adjacent to vertex u.
+
+Set d[s] = 0, the remaining d[i] have the value Inf 1 <= i <= n-1
+Create a MinQueue containing [v, d[v]], then [s, 0] will be pushed to the top of Q[0], the values [v, ∞]
+      For example: Q = [ [s, 0], [v0, ∞], [v1, ∞], [v2, ∞], ... [vk, ∞] ]
+
+Repeat operations if Q is not empty (after each call to ExtractMin)
+     - u, du = ExtractMin(Q)
+     - Browse u - mark[u]
+     - Take turns checking vertices v adjacent to u.
+         + If v has not been reviewed and a better d[v] (distance) has been found, then Relax(u, v), which means substituting a new value for d[v]
+     and attach prev[v] = u for retrieval.
+         + Call DecreaseKey() for that vertex v, because the value of v has decreased, you should update [v, d[v]] in MinQueue.
+
+````
+def Dijkstra(s): # Build a complete min queue before traversing
+     d[s] = 0
+     q = []
+     for v in V:
+         q.append([v, d[v]])
+     Q = BuildMinQueue(q)
+     while len(Q) > 0:
+         u, du = ExtractMin(Q)
+         mark[u] = True
+         for v in Adj[u]:
+             if not mark[v]:
+                 if d[v] > d[u] + W[u][v]:
+                     Relax(u, v)
+                     i = getkeys(v)
+                     DecreaseKey(Q, i, d[v])
+````
+
+-------------------------------------------------- -------------------------------------------------- ----------------
+
+Dijsktra_2 - Bfs oriented - Build empty heap at first, insert adjacent vertex.
+
+Algorithm description:
+
+Need to use array:
+     - d[]: to store the distance of a starting vertex (source) to the remaining vertices in V.
+     - Q: min priority queue to ExtractMin, Insert to add vertices to Q, and DecreaseKey when finding a shorter distance
+     (shorter way) to traverse that vertex
+     - W[][]: weight matrix.
+     - Adj[][]: Adj is a matrix, when operating Adj[u] will return a list of vertices adjacent to vertex u.
+
+Set d[s] = 0, the remaining d[i] have the value Inf 1 <= i <= n-1
+Create an empty MinQueue, and Insert [s, 0] into that MinQueue.
+      For example: Q = [ [s, 0] ]
+
+Repeat operations if Q is not empty (after each call to ExtractMin)
+     - u, du = ExtractMin(Q)
+     - Browse u - mark[u]
+     - Take turns checking vertices v adjacent to u.
+         + If v has not been reviewed and a better d[v] (distance) has been found,
+             then Relax(u, v), meaning replace a new value for d[v] and attach prev[v] = u for retrieval.
+         + After that, there will be 2 cases:
+             1. If vertex v is in the MinQueue, it means finding the Index of v (i := findIndex; i >= 0), this means
+             We find a new and better value of distance d[v] for v, when we go through the intermediate vertex u.
+                 + Call DecreaseKey() for that vertex v, because the value of v has decreased, you should update [v, d[v]] in MinQueue.
+             2. If vertex v is not yet in MinQueue,
+                 + We call Insert(Q, [i, d[v]])
+
+def Dijkstra_bfs(s): # Brady's way. Gradually insert vertex to min queue like BFS traversal.
+     d[s] = 0
+     Q = BuildEmptyMinQueue()
+     Insert(Q, [s, d[s]])
+     while len(Q) > 0:
+         u, du = ExtractMin(Q)
+         mark[u] = True
+         for v in Adj[u]:
+             if not mark[v]:
+                 if d[v] > d[u] + W[u][v]:
+                     Relax(u, v)
+                     i = findIndex(v) # i is the index of v in MinQueue (Q[i][0] = v)
+                     if i >= 0:
+                         DecreaseKey(Q, i, d[v])
+                     else:
+                         Insert(Q, [v, d[v]])
